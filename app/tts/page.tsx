@@ -14,7 +14,7 @@ export default function TTSPage() {
     "A small fire broke out today.\nNo one was hurt.\nFirefighters stopped it quickly."
   );
   const [voice, setVoice] = useState("en-US-JennyNeural");
-  // UI speed (0.3, 0.5, 0.8, 1.0) – only used on the browser side
+  // UI speed (0.3, 0.5, 0.8, 1.0,1.2) – only used on the browser side
   const [speed, setSpeed] = useState(0.5);
   const [audioUrl, setAudioUrl] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
@@ -234,7 +234,7 @@ export default function TTSPage() {
             <h2 style={{ marginTop: 20, fontSize: 18 }}>Speed</h2>
 
             <div style={{ display: "flex", gap: 10, marginBottom: 8 }}>
-              {[0.3, 0.5, 0.8, 1.0].map((s) => (
+              {[0.3, 0.5, 0.8, 1.0,1.2].map((s) => (
                 <button
                   key={s}
                   onClick={() => setSpeed(s)}
